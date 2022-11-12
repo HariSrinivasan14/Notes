@@ -22,13 +22,13 @@ def binarySearch(arr, num, minIndex=-1, maxIndex=-1):
 
 def binarySearchNonRecursive(arr, target):
     left = 0 
-    right = len(nums) - 1
+    right = len(arr) - 1
 
     while left <= right:
         midIndex = left + (right - left) // 2
-        if nums[midIndex] == target:
+        if arr[midIndex] == target:
             return midIndex
-        elif nums[midIndex] < target: # search right
+        elif arr[midIndex] < target: # search right
             left = midIndex + 1
         else: #search left
             right = midIndex - 1
